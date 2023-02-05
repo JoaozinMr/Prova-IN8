@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Prova - João Gabriel Vieira</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img id="logo" src="./logo/logo-in8-dev.svg" alt="" />
+        <div id="navbar">
+          <ul id="navMenu">
+            <li>
+              <a href="#secaoCadastro" class="nav-items">cadastro</a>
+            </li>
+            <li>
+              <a href="#listaCadastro" class="nav-items">lista</a>
+            </li>
+            <li>
+              <a href="#sobreMim" class="nav-items">sobre mim</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hamburger">
+          <img id="burger" src="./icons/hamburguer.svg" alt="" />
+        </div>
+      </header>
+      <div id="estagio-title">
+        <div>
+          <h1>ESTÁGIO</h1>
+        </div>
+        <div>
+          <h2>PROVA DE SELEÇÃO</h2>
+        </div>
+      </div>
+    </main>
+    <div id="secaoCadastro">
+      <div id="formContainer">
+        <div id="titleContainer">
+          <h2 class="cadastro-title">CADASTRO</h2>
+        </div>
+        <form name="cadastro">
+          <div class="input-container data-inputs">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" required name="txtNome" />
+          </div>
+          <div class="input-container data-inputs">
+            <label for="e-mail">E-mail</label>
+            <input
+              id="e-mail"
+              type="email"
+              required
+              pattern=".+@globex\.com"
+              name="txtEmail"
+            />
+          </div>
+          <div class="input-container data-inputs">
+            <label for="nasc">Nascimento</label>
+            <input id="nasc" type="text" required name="txtNascimento" />
+          </div>
+          <div class="input-container data-inputs">
+            <label for="tel">Telefone</label>
+            <input id="tel" type="tel" required name="txtTelefone" />
+          </div>
+          <div class="input-container" id="buttonContainer">
+            <input
+              type="button"
+              value="CADASTRAR"
+              onclick="cadastrar(txtNome.value, txtEmail.value, txtNascimento.value, txtTelefone.value)"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="listaCadastro">
+      <div id="listContainer">
+        <h2 class="cadastro-title" id="listTitle">LISTA DE CADASTRO</h2>
+      </div>
+      <div id="tableContainer">
+        <table id="tabela" class="tbCadastrados">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="top-borders" width="22%">NOME</th>
+              <th class="top-borders" width="22%">E-MAIL</th>
+              <th class="top-borders" width="22%">NASCIMENTO</th>
+              <th class="bt-rg-corner" width="22%">TELEFONE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="middle-cells numbers">1</td>
+              <td class="middle-cells data-cells" id="name1"></td>
+              <td class="middle-cells data-cells" id="email1"></td>
+              <td class="middle-cells data-cells" id="nascimento1"></td>
+              <td
+                class="middle-cells data-cells bt-rg-corner"
+                id="telefone1"
+              ></td>
+            </tr>
+            <tr>
+              <td class="middle-cells numbers">2</td>
+              <td class="middle-cells data-cells" id="name2"></td>
+              <td class="middle-cells data-cells" id="email2"></td>
+              <td class="middle-cells data-cells" id="nascimento2"></td>
+              <td
+                class="middle-cells data-cells bt-rg-corner"
+                id="telefone2"
+              ></td>
+            </tr>
+            <tr>
+              <td class="numbers middle-cells">3</td>
+              <td class="middle-cells data-cells" id="name3"></td>
+              <td class="middle-cells data-cells" id="email3"></td>
+              <td class="middle-cells data-cells" id="nascimento3"></td>
+              <td
+                class="middle-cells data-cells bt-rg-corner"
+                id="telefone3"
+              ></td>
+            </tr>
+            <tr>
+              <td class="numbers middle-cells">4</td>
+              <td class="middle-cells data-cells" id="name4"></td>
+              <td class="middle-cells data-cells" id="email4"></td>
+              <td class="middle-cells data-cells" id="nascimento4"></td>
+              <td
+                class="middle-cells data-cells bt-rg-corner"
+                id="telefone4"
+              ></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <a href="#navbar" class="toTop">
+      <img src="./icons/topo-pag.svg" alt="" />
+    </a>
+    <footer id="sobreMim">
+      <p>João Gabriel Vieira Valério Flor</p>
+      <p>joao.florv2005@gmail.com</p>
+      <p>(31) 9 7104-5343</p>
+      <p>Colégio Cotemig - Unidade Floresta</p>
+    </footer>
+  </body>
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/menu.js"></script>
+</html>

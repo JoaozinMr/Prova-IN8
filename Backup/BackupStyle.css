@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azul: #29abe2;
+  --azulEscuro: #012d51;
+  --cinza: #808080;
+  --hover: #0b84b8;
+}
+
+::-webkit-scrollbar {
+  color: var(--azul);
+  width: 0.37rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--azul);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url(./fonts/Roboto-Light_0.ttf);
+}
+@font-face {
+  font-family: HelveticaCondensed;
+  src: url(./fonts/ps.ttf);
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url(./fonts/Roboto-Regular_0.ttf);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-image: url(./images/index-image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#logo {
+  width: 12.5rem;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 18rem;
+  align-items: center;
+}
+.nav-items {
+  color: aliceblue;
+  font-family: RobotoRegular;
+  font-size: 1rem;
+  transition: 0.7s ease;
+}
+.nav-items:hover {
+  color: var(--azul);
+}
+
+#navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 2rem;
+}
+
+#estagio-title {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 14.7rem 0 0 29.5rem;
+}
+
+#estagio-title h1 {
+  font-size: 7.4rem;
+}
+#estagio-title h2 {
+  font-size: 3.2rem;
+}
+
+#estagio-title h1,
+h2 {
+  font-family: HelveticaCondensed;
+  font-weight: normal;
+  color: aliceblue;
+}
+
+#secaoCadastro {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--azul);
+  display: flex;
+  padding: 0.5em 0 0.5em 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#formContainer {
+  height: 45rem;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: HelveticaCondensed;
+}
+
+.cadastro-title {
+  font-size: 4rem;
+}
+
+form {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.input-container label {
+  font-size: 1.1rem;
+  font-family: RobotoRegular;
+  color: aliceblue;
+  margin-bottom: 0.7rem;
+}
+
+.data-inputs input {
+  height: 1.5rem;
+  background-color: transparent;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid aliceblue;
+  font-size: 1.2rem;
+  color: aliceblue;
+  font-family: HelveticaCondensed;
+}
+
+#buttonContainer {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+#buttonContainer input {
+  width: fit-content;
+  background-color: var(--azulEscuro);
+  font-size: 3rem;
+  font-family: HelveticaCondensed;
+  color: var(--azul);
+  border: none;
+  padding: 1rem 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#buttonContainer input:hover {
+  color: var(--azulEscuro);
+  background-color: var(--hover);
+  cursor: pointer;
+}
+
+#listaCadastro {
+  height: 77vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#listContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#listTitle {
+  color: var(--azul);
+  font-family: HelveticaCondensed;
+  margin-bottom: 8rem;
+}
+
+#tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tbCadastrados {
+  width: 73.875rem;
+  border-collapse: collapse;
+  padding: 5px;
+  font-family: RobotoRegular;
+  border: 1px solid #ffffff;
+}
+
+th {
+  padding: 1rem;
+  font-family: RobotoRegular;
+  color: var(--azulEscuro);
+}
+
+.tbCadastrados td {
+  text-align: center;
+  padding: 0.5rem;
+  height: 5rem;
+  font-family: RobotoLight;
+}
+
+.numbers {
+  border-left: 1px solid white;
+  color: var(--azulEscuro);
+  font-family: RobotoLight;
+  font-size: 1.3rem;
+}
+
+.middle-cells {
+  border-top: 1px solid #29abe2;
+  border-right: 1px solid #29abe2;
+}
+
+.bt-rg-corner {
+  border-right: 1px solid white;
+  border-left: 1px solid #29abe2;
+}
+
+.data-cells {
+  font-family: HelveticaCondensed;
+  color: var(--cinza);
+}
+
+.top-borders {
+  border-left: 1px solid #29abe2;
+}
+
+.toTop img {
+  width: 3rem;
+  position: relative;
+  bottom: 10.5rem;
+  left: 105rem;
+}
+
+footer {
+  height: 20rem;
+  width: 100%;
+  background-image: url('./images/rodape-desktop.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  color: aliceblue;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-family: RobotoLight;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1800px) {
+  .toTop {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+  }
+
+  #logo {
+    width: 11rem;
+  }
+
+  header {
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+  }
+
+  #navMenu {
+    position: fixed;
+    right: -100%;
+    top: 6rem;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--azul);
+    width: 50%;
+    text-align: flex-start;
+    transition: 1s ease;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+
+  #navMenu.active {
+    left: 0;
+  }
+
+  .nav-items:hover {
+    color: var(--azulEscuro);
+  }
+  .cadastro-title {
+    font-size: 3.5rem;
+  }
+
+  #buttonContainer input {
+    font-size: 4rem;
+  }
+
+  main {
+    background-size: cover;
+  }
+  #formContainer {
+    width: 38rem;
+  }
+
+  #listTitle {
+    margin-bottom: 5rem;
+    font-size: 3rem;
+  }
+
+  .tbCadastrados {
+    width: 40rem;
+  }
+  #estagio-title {
+    margin: 5rem 0 0 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+  }
+
+  #logo {
+    width: 11rem;
+  }
+
+  header {
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+  }
+
+  #navMenu {
+    position: fixed;
+    right: -100%;
+    top: 6rem;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--azul);
+    width: 50%;
+    text-align: flex-start;
+    transition: 1s ease;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+
+  #navMenu.active {
+    left: 0;
+  }
+
+  .nav-items:hover {
+    color: var(--azulEscuro);
+  }
+
+  footer {
+    background-image: url(./images/rodape-mobile.jpg);
+  }
+
+  .cadastro-title {
+    font-size: 3.5rem;
+  }
+
+  #buttonContainer input {
+    font-size: 4rem;
+  }
+
+  main {
+    background-size: cover;
+  }
+  #formContainer {
+    width: 38rem;
+  }
+
+  #listTitle {
+    margin-bottom: 5rem;
+    font-size: 3rem;
+  }
+
+  .tbCadastrados {
+    width: 40rem;
+  }
+  #estagio-title {
+    margin: 5rem 0 0 5rem;
+  }
+}
+@media (max-width: 620px) {
+  main {
+    background-image: url(./images/index-image-mobile.jpg);
+    background-size: cover;
+    background-position: center bottom;
+  }
+  header {
+    padding: 0 2rem 0 1rem;
+  }
+  #formContainer {
+    width: 25rem;
+  }
+
+  .tbCadastrados {
+    width: 20rem;
+  }
+
+  th {
+    font-size: 0.9rem;
+  }
+
+  td,
+  .numbers {
+    font-size: 0.8rem;
+  }
+
+  #listTitle {
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+  }
+  #estagio-title {
+    justify-content: center;
+  }
+  #estagio-title h1 {
+    font-size: 5.4rem;
+  }
+  #estagio-title h2 {
+    font-size: 2.35rem;
+  }
+}
